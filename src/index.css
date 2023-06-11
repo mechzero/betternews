@@ -34,7 +34,7 @@ input {
   outline: none;
   background-color: transparent;
   padding: 1.25rem 1rem;
-  color: slateblue;
+  color: rgb(169, 166, 166);
   border:  0.1rem solid slateblue;
   margin-right: 1rem;
   border-radius: 0.625rem;
@@ -42,7 +42,7 @@ input {
 }
 
 input::placeholder{
-  color: slategray
+  color: rgb(151, 148, 148)
 }
 
 button {
