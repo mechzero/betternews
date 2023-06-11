@@ -14,9 +14,13 @@ function App() {
     setIsLoading(true)
       const fetchArticles = async() => {
         const res = await fetch (`https://hn.algolia.com/api/v1/search?query=${query}`)
-        const data = await res.json()
-        setItems(data.hits)
-        setLargeTitle(data.hits[0])
+        
+        const data = await res.json() 
+
+        const filteredHits = data.hits.filter((item) => item.url !== null);
+
+        setItems(filteredHits)
+        setLargeTitle(filteredHits[0])
       }
 
       fetchArticles()
